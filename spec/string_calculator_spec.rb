@@ -17,5 +17,10 @@ RSpec.describe StringCalculator do
       calc = StringCalculator.new
       expect(calc.add("1,2")).to eq(3)
     end
+
+    it "returns the sum of multiple numbers" do
+      calc = StringCalculator.new
+      expect(calc.add("1,25,13,4")).to eq(43)
+    end
   end
 end
