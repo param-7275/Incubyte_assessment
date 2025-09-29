@@ -22,5 +22,10 @@ RSpec.describe StringCalculator do
       calc = StringCalculator.new
       expect(calc.add("1,25,13,4")).to eq(43)
     end
+
+    it "handles newline as a delimiter" do
+      calc = StringCalculator.new
+      expect(calc.add("1\n2,3")).to eq(6)
+    end
   end
 end
