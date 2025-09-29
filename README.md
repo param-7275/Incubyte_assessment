@@ -18,9 +18,9 @@ It demonstrates Test-Driven Development (TDD) practices step by step.
 - bundle install
 
 ## Folder Structure
-app/string_calculator.rb # Main class
-spec/string_calculator_spec.rb # RSpec tests
-run_string_calculator.rb # Demo script
-Gemfile
-Gemfile.lock
-README.md
+- app/string_calculator.rb # Main class
+- spec/string_calculator_spec.rb # RSpec tests
+- run_string_calculator.rb # Demo script
+- Gemfile
+- Gemfile.lock
+- README.md
