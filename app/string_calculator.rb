@@ -11,17 +11,12 @@ class StringCalculator
     end
 
     nums = numbers.split(Regexp.union(delimiters)).map(&:to_i)
-    return nums.first if nums.length == 1
 
+    negative_numbers = nums.select { |n| n < 0 }
+    raise "negative numbers not allowed #{negative_numbers.join(',')}" if negative_numbers.any?
+
+    return nums.first if nums.length == 1
     nums.sum
   end
 end
-
-calculator = StringCalculator.new
-puts calculator.add("")
-puts calculator.add("1") 
-puts calculator.add("2,3")
-puts calculator.add("2,3,32,43,7,78,45") 
-puts calculator.add("1\n2,3")
-puts calculator.add("//;\n3;2")
 
